@@ -76,7 +76,18 @@ After you create your `.env` file open it up in your Visual Studio Code and add 
 DB_URL="Replace Database URL with the URL of your MongoDB Cluster"
 ```
 
-2. In the 
+2. In the `index.js` code file you will need to uncomment these following lines to be able to make a connection to your MongoDB Cluster
+
+```JavaScript
+// const mongoose = require("mongoose"); // uncomment this line for lesson 3 of express
+// const itemModel = require("./models/items"); // uncomment this line for
+// const dbURL = process.env.dbURL; // uncomment this line for lesson 3 of express 
+// mongoose.connect(dbURL)
+// .then(() => console.log("Connected to MongoDB"))
+// .catch((err) => console.error(err.message))
+```
+
+After you uncomment the lines and run the application, as long as you set up your database credentials properly, your application should connect to your database, and you should be able to use the `itemModel` variable to communcate with the `items` table in your MongoDB Cluster.
 
 ## Available Commands
 
